@@ -1,5 +1,6 @@
 # CRUD Students - API/NodeJS
-#### API para a aplicação de registro de alunos com NodeJS/Typescript, Express e Arquitetura em camadas.
+#### API para a aplicação de registro de alunos com NodeJS/Typescript, Express, MySQL, Sequelize e Arquitetura em camadas.
+<img src="./arquitetura-api.jpg" />
 
 ## Project setup
 ```
