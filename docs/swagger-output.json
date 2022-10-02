@@ -1,0 +1,231 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Challenge FullStack Web API",
+    "description": "Backend Routes' Documentation from Academic Module from Group A's Challenge"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Student",
+      "description": "Endpoints"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/hello-world": {
+      "get": {
+        "description": "Welcome Route with an message for the evaluators",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/student": {
+      "post": {
+        "description": "Route to add a new student",
+        "parameters": [
+            {
+                "name": "obj",
+                "in": "body",
+                "description": "Student Information",
+                "required": true,
+                "schema": {
+                    "$ref": "#/definitions/AddStudent"
+                }
+            }
+        ],
+        "responses": {
+            "201": {
+                "description": "Created"
+            },
+            "400": {
+                "description": "Bad Request"
+            },
+            "500": {
+                "description": "Internal Server Error"
+            }
+        }
+      },
+      "put": {
+        "description": "Route to update a student's registration",
+        "parameters": [
+            {
+                "name": "obj",
+                "in": "body",
+                "description": "Student Information to Update",
+                "required": true,
+                "schema": {
+                    "$ref": "#/definitions/UpdateStudent"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK"
+            },
+            "400": {
+                "description": "Bad Request"
+            },
+            "500": {
+                "description": "Internal Server Error"
+            }
+        }
+      },
+      "delete": {
+        "description": "Route to delete a student's registration",
+        "parameters": [
+            {
+                "name": "academicRecord",
+                "in": "path",
+                "description": "AcademicRecord from student to be deleted",
+                "required": true
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK"
+            },
+            "400": {
+                "description": "Bad Request"
+            },
+            "500": {
+                "description": "Internal Server Error"
+            }
+        }
+      },
+      "get": {
+        "description": "Route to return all students' registration from data base",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "OK"
+            },
+            "500": {
+                "description": "Internal Server Error"
+            }
+        }
+      }
+    },
+    "/student/{academicRecord}": {
+      "get": {
+        "description": "Route to find a student's registration by your academic record number",
+        "parameters": [
+            {
+                "name": "academicRecord",
+                "in": "path",
+                "description": "AcademicRecord from student to be found",
+                "required": true
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK"
+            },
+            "400": {
+                "description": "Bad Request"
+            },
+            "500": {
+                "description": "Internal Server Error"
+            }
+        }
+      }
+    },
+    "/students/pagination": {
+      "get": {
+        "description": "Route to return all students' registration from data base with pagination' system",
+        "parameters": [
+            {
+                "name": "page",
+                "in": "query",
+                "type": "number",
+                "description": "Page of paginate find all students",
+                "required": true
+            },
+            {
+                "name": "size",
+                "in": "query",
+                "type": "number",
+                "description": "Size of paginate find all students",
+                "required": true
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK"
+            },
+            "500": {
+                "description": "Internal Server Error"
+            }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddStudent": {
+        "type": "object",
+        "properties": {
+            "name":{
+                "type": "string",
+                "example": "Jhonata Galante"
+            },
+            "email":{
+                "type": "string",
+                "example": "jhonata@teste.com"
+            },
+            "cpf":{
+                "type": "string",
+                "example": "123.456.789-00"
+            },
+            "academicRecord":{
+                "type": "string",
+                "example": "5635687"
+            }
+        },
+        "required": [
+            "name",
+            "email",
+            "cpf",
+            "academicRecord"
+        ],
+        "xml":{
+            "name":"AddStudent"
+        }
+    },
+    "UpdateStudent": {
+        "type": "object",
+        "properties": {
+            "name":{
+                "type": "string",
+                "example": "Jhonata Galante"
+            },
+            "email":{
+                "type": "string",
+                "example": "jhonata@teste.com"
+            },
+            "academicRecord":{
+                "type": "string",
+                "example": "5635687"
+            }
+        },
+        "required": [
+            "name",
+            "email",
+            "academicRecord"
+        ],
+        "xml":{
+            "name":"UpdateStudent"
+        }
+    }
+  }
+}
