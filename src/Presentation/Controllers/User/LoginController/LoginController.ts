@@ -5,7 +5,9 @@ import { Controller, HttpRequest, HttpResponse } from '../../../protocols'
 import { Validation } from '../../../protocols/Validation'
 import { sign } from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
+import dotenv from 'dotenv'
 
+dotenv.config()
 export class LoginController implements Controller {
   constructor (
     private readonly findUserByEmail: IFindUserByEmail,
@@ -20,20 +22,20 @@ export class LoginController implements Controller {
 
       const { email, password } = httpRequest.body
       const foundUser = await this.findUserByEmail.findByEmail(email)
-      const comparedPassword = bcrypt.compareSync(password, foundUser.password)
+      const comparedPassword = foundUser ? bcrypt.compareSync(password, foundUser.password) : false
 
       if (!foundUser || !comparedPassword) {
         return badRequest('Email ou senha incorretos!')
       }
 
       const token = sign({
-        userId: foundUser.id
+        userId: foundUser.id,
+        email: foundUser.email
       },
-      'Logado',
+      process.env.API_TOKEN,
       {
-        expiresIn: '24h'
-      }
-      )
+        expiresIn: '2h'
+      })
 
       return ok({
         user: { id: foundUser.id, email: foundUser.email },

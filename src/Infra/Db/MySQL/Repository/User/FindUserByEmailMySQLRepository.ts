@@ -6,6 +6,9 @@ export class FindUserByEmailMySQLRepository implements IFindUserByEmailRepositor
   async findByEmail (email: string): Promise<IUserModel> {
     try {
       const foundUser = await UserModel.findOne({ where: { email } })
+      if (!foundUser) {
+        return null
+      }
       return {
         id: foundUser.get('id') as number,
         email: foundUser.get('email') as string,

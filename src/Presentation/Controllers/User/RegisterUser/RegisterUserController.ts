@@ -4,6 +4,10 @@ import { ServerError } from '../../../Errors'
 import { badRequest, created, internalServerError } from '../../../Helpers/Http/HttpHelpers'
 import { Controller, HttpRequest, HttpResponse } from '../../../protocols'
 import { Validation } from '../../../protocols/Validation'
+import { sign } from 'jsonwebtoken'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export class RegisterUserController implements Controller {
   constructor (
@@ -23,11 +27,23 @@ export class RegisterUserController implements Controller {
       if (foundUser) {
         return badRequest('Usuário já cadastrado')
       }
+
       const registeredUser = await this.addUser.add({
         email,
         password
       })
-      return created(registeredUser)
+      const token = sign({
+        userId: registeredUser.id,
+        email: registeredUser.email
+      },
+      process.env.API_TOKEN,
+      {
+        expiresIn: '2h'
+      })
+      return created({
+        user: registeredUser,
+        token
+      })
     } catch (error) {
       console.error(error)
       return internalServerError(new ServerError(error))
