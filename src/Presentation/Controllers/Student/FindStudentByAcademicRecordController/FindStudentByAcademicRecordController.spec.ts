@@ -1,6 +1,6 @@
 import { FindStudentByAcademicRecordController } from './FindStudentByAcademicRecordController'
-import { IFindStudentByAcademicRecord } from '../../../../Domain/UseCases/FindStudentByAcademicRecord'
-import { IStudentModel } from '../../../../Domain/Types/StudentModel'
+import { IFindStudentByAcademicRecord } from '../../../../Domain/UseCases/Student/FindStudentByAcademicRecord'
+import { IStudentModel } from '../../../../Domain/Types'
 import { HttpRequest } from '../../../protocols'
 import { Validation } from '../../../protocols/Validation'
 import { badRequest, ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'

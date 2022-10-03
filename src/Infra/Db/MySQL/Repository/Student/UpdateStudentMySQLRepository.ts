@@ -1,8 +1,7 @@
 import { IFormatter } from '../../../../../Data/Interfaces/Helpers/Formatter'
-import { IStudentModel } from '../../../../../Domain/Types/StudentModel'
 import { IUpdateStudentRepository } from '../../../../../Data/Interfaces/Db/Student/UpdateStudentRepository'
 import { StudentModel } from '../../../../../Domain/Models'
-import { IUpdateStudentModel } from '../../../../../Domain/Types'
+import { IStudentModel, IUpdateStudentModel } from '../../../../../Domain/Types'
 
 export class UpdateStudentMySQLRepository implements IUpdateStudentRepository {
   constructor (private readonly cpfFormatterHelper: IFormatter) {

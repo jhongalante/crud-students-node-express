@@ -1,6 +1,6 @@
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IDeleteStudentRepository } from '../../Interfaces/Db/student/DeleteStudentRepository'
-import { IDeleteStudent } from '../../../Domain/UseCases/DeleteStudent'
+import { IStudentModel } from '../../../../Domain/Types'
+import { IDeleteStudent } from '../../../../Domain/UseCases/Student/DeleteStudent'
+import { IDeleteStudentRepository } from '../../../Interfaces/Db/Student/DeleteStudentRepository'
 import { DbDeleteStudent } from './DbDeleteStudent'
 
 describe('DbDeleteStudent', () => {

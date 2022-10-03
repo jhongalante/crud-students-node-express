@@ -1,4 +1,4 @@
-import { IFindAllStudentsWithPaginate } from '../../../../Domain/UseCases/FindAllStudentsWithPaginate'
+import { IFindAllStudentsWithPaginate } from '../../../../Domain/UseCases/Student/FindAllStudentsWithPaginate'
 import { ServerError } from '../../../Errors'
 import { ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'
 import { Controller, HttpRequest, HttpResponse } from '../../../protocols'

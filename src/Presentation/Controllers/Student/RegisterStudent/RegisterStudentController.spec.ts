@@ -1,5 +1,5 @@
-import { IFindStudentByAcademicRecord } from '../../../../Domain/UseCases/FindStudentByAcademicRecord'
-import { IStudentModel } from '../../../../Domain/Types/StudentModel'
+import { IFindStudentByAcademicRecord } from '../../../../Domain/UseCases/Student/FindStudentByAcademicRecord'
+import { IStudentModel } from '../../../../Domain/Types'
 import { HttpRequest } from '../../../protocols'
 import { Validation } from '../../../protocols/Validation'
 import { IAddStudent } from '../../../../Domain/UseCases/Student/AddStudent'

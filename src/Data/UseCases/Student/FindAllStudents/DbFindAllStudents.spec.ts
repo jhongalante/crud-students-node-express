@@ -1,6 +1,6 @@
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IFindAllStudents } from '../../../Domain/UseCases/FindAllStudents'
-import { IFindAllStudentsRepository } from '../../Interfaces/Db/student/FindAllStudentsRepository'
+import { IStudentModel } from '../../../../Domain/Types'
+import { IFindAllStudents } from '../../../../Domain/UseCases/Student/FindAllStudents'
+import { IFindAllStudentsRepository } from '../../../Interfaces/Db/Student/FindAllStudentsRepository'
 import { DbFindAllStudents } from './DbFindAllStudents'
 
 describe('DbFindAllStudents', () => {

@@ -1,6 +1,6 @@
 import { FindAllStudentsController } from './FindAllStudentsController'
-import { IFindAllStudents } from '../../../../Domain/UseCases/FindAllStudents'
-import { IStudentModel } from '../../../../Domain/Types/StudentModel'
+import { IFindAllStudents } from '../../../../Domain/UseCases/Student/FindAllStudents'
+import { IStudentModel } from '../../../../Domain/Types'
 import { ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'
 import { ServerError } from '../../../Errors'
 import { HttpRequest } from '../../../protocols'

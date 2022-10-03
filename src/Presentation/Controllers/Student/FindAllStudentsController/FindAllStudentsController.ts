@@ -1,4 +1,4 @@
-import { IFindAllStudents } from '../../../../Domain/UseCases/FindAllStudents'
+import { IFindAllStudents } from '../../../../Domain/UseCases/Student/FindAllStudents'
 import { ServerError } from '../../../Errors'
 import { ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'
 import { Controller, HttpRequest, HttpResponse } from '../../../protocols'

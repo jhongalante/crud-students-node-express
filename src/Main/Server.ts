@@ -1,16 +1,15 @@
 import { MySQLConnection } from '../Infra/Db/MySQL/MySQLConnection'
 import dotenv from 'dotenv'
-import express from 'express'
 import setupMiddlewares from './Config/Middlewares'
 import setupRoutes from './Config/Routes'
 import swaggerUi from 'swagger-ui-express'
 import swaggerJson from '../../docs/swagger-output.json'
 
 dotenv.config()
-const app = express()
 
 MySQLConnection.connect().sync()
   .then(async () => {
+    const app = (await import('./Config/App')).default
     app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerJson))
     setupMiddlewares(app)
     setupRoutes(app)

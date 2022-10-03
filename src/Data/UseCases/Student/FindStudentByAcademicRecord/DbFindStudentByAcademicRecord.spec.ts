@@ -1,7 +1,7 @@
+import { IStudentModel } from '../../../../Domain/Types'
+import { IFindStudentByAcademicRecord } from '../../../../Domain/UseCases/Student/FindStudentByAcademicRecord'
+import { IFindStudentByAcademicRecordRepository } from '../../../Interfaces/Db/Student/FindStudentByAcademicRecordRepository'
 import { DbFindStudentByAcademicRecord } from './DbFindStudentByAcademicRecord'
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IFindStudentByAcademicRecordRepository } from '../../Interfaces/Db/student/FindStudentByAcademicRecordRepository'
-import { IFindStudentByAcademicRecord } from '../../../Domain/UseCases/FindStudentByAcademicRecord'
 
 describe('DbFindStudentByAcademicRecord', () => {
   const makeFindStudentByAcademicRecordMock = (): IStudentModel => ({

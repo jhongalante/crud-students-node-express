@@ -1,4 +1,4 @@
-import { IDeleteStudent } from '../../../../Domain/UseCases/DeleteStudent'
+import { IDeleteStudent } from '../../../../Domain/UseCases/Student/DeleteStudent'
 import { ServerError } from '../../../Errors'
 import { badRequest, ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'
 import { Controller, HttpRequest, HttpResponse } from '../../../protocols'

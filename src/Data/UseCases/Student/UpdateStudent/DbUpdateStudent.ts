@@ -1,7 +1,6 @@
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IUpdateStudentModel } from '../../../Domain/Types'
-import { IUpdateStudent } from '../../../Domain/UseCases/UpdateStudent'
-import { IUpdateStudentRepository } from '../../Interfaces/Db/student/UpdateStudentRepository'
+import { IStudentModel, IUpdateStudentModel } from '../../../../Domain/Types'
+import { IUpdateStudent } from '../../../../Domain/UseCases/Student/UpdateStudent'
+import { IUpdateStudentRepository } from '../../../Interfaces/Db/Student/UpdateStudentRepository'
 
 export class DbUpdateStudent implements IUpdateStudent {
   private readonly updateStudentRepository: IUpdateStudentRepository

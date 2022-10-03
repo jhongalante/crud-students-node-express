@@ -1,11 +1,10 @@
 import { UpdateStudentController } from './UpdateStudentController'
-import { IStudentModel } from '../../../../Domain/Types/StudentModel'
 import { HttpRequest } from '../../../protocols'
 import { Validation } from '../../../protocols/Validation'
 import { badRequest, ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'
 import { RequiredFieldError, ServerError } from '../../../Errors'
-import { IUpdateStudent } from '../../../../Domain/UseCases/UpdateStudent'
-import { IUpdateStudentModel } from '../../../../Domain/Types'
+import { IUpdateStudent } from '../../../../Domain/UseCases/Student/UpdateStudent'
+import { IStudentModel, IUpdateStudentModel } from '../../../../Domain/Types'
 
 const makeRequestMock = (): HttpRequest => ({
   body: {

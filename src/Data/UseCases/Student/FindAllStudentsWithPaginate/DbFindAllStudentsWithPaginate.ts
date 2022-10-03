@@ -1,7 +1,7 @@
-import { IStudentWithPaginateModel } from '../../../Domain/Types/StudentsWithPaginateModel'
-import { ICalculatePaginationHelper } from '../../Interfaces/Helpers/CalculatePaginationHelper'
-import { IFindAllStudentsWithPaginate } from '../../../Domain/UseCases/FindAllStudentsWithPaginate'
-import { IFindAllStudentsWithPaginateRepository } from '../../Interfaces/Db/student/FindAllStudentsWithPaginateRepository'
+import { IStudentWithPaginateModel } from '../../../../Domain/Types'
+import { IFindAllStudentsWithPaginate } from '../../../../Domain/UseCases/Student/FindAllStudentsWithPaginate'
+import { IFindAllStudentsWithPaginateRepository } from '../../../Interfaces/Db/Student/FindAllStudentsWithPaginateRepository'
+import { ICalculatePaginationHelper } from '../../../Interfaces/Helpers/CalculatePaginationHelper'
 
 export class DbFindAllStudentsWithPaginate implements IFindAllStudentsWithPaginate {
   private readonly findAllStudentsWithPaginateRepository: IFindAllStudentsWithPaginateRepository

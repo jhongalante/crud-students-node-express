@@ -1,6 +1,6 @@
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IFindAllStudentsRepository } from '../../Interfaces/Db/student/FindAllStudentsRepository'
-import { IFindAllStudents } from '../../../Domain/UseCases/FindAllStudents'
+import { IStudentModel } from '../../../../Domain/Types'
+import { IFindAllStudents } from '../../../../Domain/UseCases/Student/FindAllStudents'
+import { IFindAllStudentsRepository } from '../../../Interfaces/Db/Student/FindAllStudentsRepository'
 
 export class DbFindAllStudents implements IFindAllStudents {
   private readonly findAllStudentsRepository: IFindAllStudentsRepository

@@ -1,6 +1,6 @@
-import { IDeleteStudentRepository } from '../../Interfaces/Db/student/DeleteStudentRepository'
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IDeleteStudent } from '../../../Domain/UseCases/DeleteStudent'
+import { IStudentModel } from '../../../../Domain/Types'
+import { IDeleteStudent } from '../../../../Domain/UseCases/Student/DeleteStudent'
+import { IDeleteStudentRepository } from '../../../Interfaces/Db/Student/DeleteStudentRepository'
 
 export class DbDeleteStudent implements IDeleteStudent {
   private readonly deleteStudentRepository: IDeleteStudentRepository
