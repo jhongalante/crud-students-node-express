@@ -1,4 +1,4 @@
-import { IUpdateStudent } from '../../../../Domain/UseCases/UpdateStudent'
+import { IUpdateStudent } from '../../../../Domain/UseCases/Student/UpdateStudent'
 import { ServerError } from '../../../Errors'
 import { badRequest, ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'
 import { Controller, HttpRequest, HttpResponse } from '../../../protocols'

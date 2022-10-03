@@ -1,5 +1,5 @@
-import { IDeleteStudent } from '../../../../Domain/UseCases/DeleteStudent'
-import { IStudentModel } from '../../../../Domain/Types/StudentModel'
+import { IDeleteStudent } from '../../../../Domain/UseCases/Student/DeleteStudent'
+import { IStudentModel } from '../../../../Domain/Types'
 import { HttpRequest } from '../../../protocols'
 import { Validation } from '../../../protocols/Validation'
 import { badRequest, ok, internalServerError } from '../../../Helpers/Http/HttpHelpers'

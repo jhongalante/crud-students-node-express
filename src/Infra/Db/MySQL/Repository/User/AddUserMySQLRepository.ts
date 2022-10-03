@@ -1,6 +1,6 @@
 import { UserModel } from './../../../../../Domain/Models/UserModel'
-import { IUserModel } from './../../../../../Domain/Types/UserModel'
-import { ILoginModel } from './../../../../../Domain/Types/LoginModel'
+import { IUserModel } from './../../../../../Domain/Types/User/UserModel'
+import { ILoginModel } from './../../../../../Domain/Types/User/LoginModel'
 import { IAddUserRepository } from '../../../../../Data/Interfaces/Db/User/AddUserRepository'
 import bcrypt from 'bcrypt'
 

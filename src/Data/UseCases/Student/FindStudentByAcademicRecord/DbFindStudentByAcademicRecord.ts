@@ -1,6 +1,6 @@
-import { IFindStudentByAcademicRecord } from '../../../Domain/UseCases/FindStudentByAcademicRecord'
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IFindStudentByAcademicRecordRepository } from '../../Interfaces/Db/student/FindStudentByAcademicRecordRepository'
+import { IStudentModel } from '../../../../Domain/Types'
+import { IFindStudentByAcademicRecord } from '../../../../Domain/UseCases/Student/FindStudentByAcademicRecord'
+import { IFindStudentByAcademicRecordRepository } from '../../../Interfaces/Db/Student/FindStudentByAcademicRecordRepository'
 
 export class DbFindStudentByAcademicRecord implements IFindStudentByAcademicRecord {
   private readonly findStudentByAcademicRecordRepository: IFindStudentByAcademicRecordRepository

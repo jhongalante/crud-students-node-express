@@ -1,7 +1,7 @@
 import { IFormatter } from '../../../../../Data/Interfaces/Helpers/Formatter'
 import { StudentModel } from '../../../../../Domain/Models'
 import { IFindAllStudentsRepository } from '../../../../../Data/Interfaces/Db/Student/FindAllStudentsRepository'
-import { IStudentModel } from '../../../../../Domain/Types'
+import { IStudentModel } from '../../../../../Domain/Types/Student/StudentModel'
 
 export class FindAllStudentsMySQLRepository implements IFindAllStudentsRepository {
   constructor (private readonly cpfFormatterHelper: IFormatter) {

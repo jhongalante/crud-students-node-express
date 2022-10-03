@@ -1,7 +1,6 @@
-import { IUpdateStudent } from '../../../Domain/UseCases/UpdateStudent'
-import { IUpdateStudentModel } from '../../../Domain/Types/UpdateStudentModel'
-import { IStudentModel } from '../../../Domain/Types/StudentModel'
-import { IUpdateStudentRepository } from '../../Interfaces/Db/student/UpdateStudentRepository'
+import { IStudentModel, IUpdateStudentModel } from '../../../../Domain/Types'
+import { IUpdateStudent } from '../../../../Domain/UseCases/Student/UpdateStudent'
+import { IUpdateStudentRepository } from '../../../Interfaces/Db/Student/UpdateStudentRepository'
 import { DbUpdateStudent } from './DbUpdateStudent'
 
 describe('DbUpdateStudent', () => {

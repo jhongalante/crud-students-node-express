@@ -1,6 +1,6 @@
 import { DbAddStudent } from './DbAddStudent'
 import { IAddStudentRepository } from '../../../Interfaces/Db/Student/AddStudentRepository'
-import { IStudentModel } from '../../../../Domain/Types/StudentModel'
+import { IStudentModel } from '../../../../Domain/Types'
 import { IFormatter } from '../../../Interfaces/Helpers/Formatter'
 import { IAddStudent } from '../../../../Domain/UseCases/Student/AddStudent'
 

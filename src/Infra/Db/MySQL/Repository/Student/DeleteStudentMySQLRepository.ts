@@ -1,5 +1,5 @@
 import { IFormatter } from '../../../../../Data/Interfaces/Helpers/Formatter'
-import { IStudentModel } from '../../../../../Domain/Types/StudentModel'
+import { IStudentModel } from '../../../../../Domain/Types'
 import { StudentModel } from '../../../../../Domain/Models'
 import { IDeleteStudentRepository } from '../../../../../Data/Interfaces/Db/Student/DeleteStudentRepository'
 

@@ -1,9 +1,8 @@
-
 import { IFormatter } from '../../../../../Data/Interfaces/Helpers/Formatter'
-import { IStudentModel } from '../../../../../Domain/Types/StudentModel'
 import { StudentModel } from '../../../../../Domain/Models'
 import { IFindAllStudentsWithPaginateRepository } from '../../../../../Data/Interfaces/Db/Student/FindAllStudentsWithPaginateRepository'
 import { IStudentWithPaginateModel } from '../../../../../Domain/Types/Student/StudentsWithPaginateModel'
+import { IStudentModel } from '../../../../../Domain/Types/Student/StudentModel'
 
 export class FindAllStudentsWithPaginateMySQLRepository implements IFindAllStudentsWithPaginateRepository {
   constructor (private readonly cpfFormatterHelper: IFormatter) {

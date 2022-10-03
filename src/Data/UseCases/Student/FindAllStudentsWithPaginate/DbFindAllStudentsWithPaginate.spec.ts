@@ -1,9 +1,8 @@
-import { ICalculatePaginationHelper } from '../../Interfaces/Helpers/CalculatePaginationHelper'
-import { IStudentWithPaginateModel } from '../../../Domain/Types/StudentsWithPaginateModel'
-import { IFindAllStudentsWithPaginateRepository } from '../../Interfaces/Db/student/FindAllStudentsWithPaginateRepository'
-import { IFindAllStudentsWithPaginate } from '../../../Domain/UseCases/FindAllStudentsWithPaginate'
+import { ICalculatePaginationHelperModel, IStudentWithPaginateModel } from '../../../../Domain/Types'
+import { IFindAllStudentsWithPaginate } from '../../../../Domain/UseCases/Student/FindAllStudentsWithPaginate'
+import { IFindAllStudentsWithPaginateRepository } from '../../../Interfaces/Db/Student/FindAllStudentsWithPaginateRepository'
+import { ICalculatePaginationHelper } from '../../../Interfaces/Helpers/CalculatePaginationHelper'
 import { DbFindAllStudentsWithPaginate } from './DbFindAllStudentsWithPaginate'
-import { ICalculatePaginationHelperModel } from '../../../Domain/Types'
 
 describe('DbFindAllStudentsWithPaginate', () => {
   const makeFindAllStudentsWithPaginateMock = (): IStudentWithPaginateModel => ({
